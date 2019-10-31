@@ -1,0 +1,18 @@
+.data
+.globl main
+.text
+main:
+addi $v0, $zero, 5
+syscall
+addi $t0, $v0, 0
+addi $v0, $zero, 5
+syscall
+addi $t1, $v0, 0 #t0 1st, t1 2nd
+add $a0, $t0, $t1
+addi $v0, $zero, 1
+syscall
+sub $a0, $t0, $t1
+addi $v0, $zero, 1
+syscall
+addi $v0, $zero, 10
+syscall
